@@ -10,11 +10,11 @@
                 </div>
 
                 <div class="lng-home header__title hide1100max">
-                    <h3 id="page_title"><a href="/index">Главная</a></h3>
+                    <h3 id="page_title"><a href="{{ Route('index') }}">Главная</a></h3>
                 </div>
 
                 <a class="logo" href="/index">
-                    <img src="/images/logo.svg" th:href="@{/images/logo.svg}" alt="">
+                    <img src="{{ asset('img/logo.svg') }}" alt="">
                 </a>
 
                 <div class="header__op">
@@ -25,7 +25,7 @@
                     </div>
 
                     <div class="header__cart">
-                        <a class="lng-buck header__cart-link header-btn" href="/cart" target="_top">Корзина</a>
+                        <a class="lng-buck header__cart-link header-btn" href="{{ Route('cart') }}" target="_top">Корзина</a>
                     </div>
 
                 </div>

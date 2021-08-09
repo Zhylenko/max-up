@@ -6,8 +6,6 @@
 @section('styles')
 @endsection
 
-@include('home.main', ['passed' => $passed])
-
 @section('content')
         <div class="product__inner height-content">
             <div class="product__items">
@@ -15,8 +13,7 @@
                 <div class="product__item">
                     <div class="product__item-block">
                         <a class="product__item-link" href="/instagram">
-                            <img src="./images/service/instagram.svg" th:src="@{/images/service/instagram.svg}"
-                                alt="instagram">
+                            <img src="{{ asset('img/service/instagram.svg') }}" alt="instagram">
                             <div class="item__overlay">
                                 <h3 class="item__overlay-title">Instagram</h3>
                             </div>

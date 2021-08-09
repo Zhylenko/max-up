@@ -2,15 +2,17 @@
     <!-- Navbar -->
 	<div class="pre-b" id="pre">
 		<div class="burger__menu" id="sidebar">
-			<div class="greetings" style="display: none;">Привет, <span class="greeting-user"></span>!</div>
+			@auth
+			<div class="greetings">Привет, <span class="greeting-user">{{ Auth::user()->name }}</span>!</div>
+			@endif
 			<div class="burger-hr">
-				<a class="lng-home burger__menu-link" href="/index" target="_top"><i class="fas fa-home"></i>Главная</a>
+				<a class="lng-home burger__menu-link" href="{{ Route('index') }}" target="_top"><i class="fas fa-home"></i>Главная</a>
 				<a class="lng-socail burger__menu-link" href="/socialnetworks" target="_top"><i class="fas fa-hashtag"></i>Социальные сети</a>
 				<a class="lng-rate burger__menu-link" href="/rating" target="_top"><i class="fas fa-hashtag"></i>Рейтинги и отзывы</a>
 
 			</div>
 			<div class="burger-hr">
-				<a class="lng-buck burger__menu-link" href="/cart" target="_top"><i class="fas fa-shopping-cart"></i>Корзина</a>
+				<a class="lng-buck burger__menu-link" href="{{ Route('cart') }}" target="_top"><i class="fas fa-shopping-cart"></i>Корзина</a>
 				<a class="lng-subsc burger__menu-link" href="/subscriptions" target="_top"><i class="fas fa-sync"></i>Подписки</a>
 				<a class="lng-history burger__menu-link" href="/history" target="_top"><i class="fas fa-history"></i>История заказов</a>
 				<a class="lng-balance burger__menu-link" href="/addfunds" target="_top"><i class="far fa-credit-card"></i>Пополнить баланс</a>
@@ -34,14 +36,15 @@
 
 			<div class="burger-hr">
 				<a class="burger__menu-link" target="_top" href="/api"><i class="fas fa-terminal"></i>Public API</a>
-				<a class="burger__menu-link" target="_top" href="/resell"><i class="fas fa-terminal"></i>Reseller
-					API</a>
+				<a class="burger__menu-link" target="_top" href="/resell"><i class="fas fa-terminal"></i>Reseller API</a>
 			</div>
 
 			<div class="burger-hr">
-				<a class="lng-login burger__menu-link login green-link" href="/login"><i class="fas fa-sign-in-alt"></i>Вход</a>
-				<a class="lng-registr burger__menu-link register green-link" href="/register"><i class="fas fa-sign-in-alt"></i>Регистрация</a>
-				<a class="lng-registr burger__menu-link logout green-link" href="/login" style="display: none;"><i class="fas fa-sign-out-alt"></i>Выйти</a>
+				<a class="lng-login burger__menu-link login green-link" href="{{ Route('login') }}"><i class="fas fa-sign-in-alt"></i>Вход</a>
+				<a class="lng-registr burger__menu-link register green-link" href="{{ Route('register') }}"><i class="fas fa-sign-in-alt"></i>Регистрация</a>
+				@auth
+				<a class="lng-registr burger__menu-link logout green-link" href="{{ Route('logout') }}"><i class="fas fa-sign-out-alt"></i>Выйти</a>
+				@endif
 			</div>
 
 		</div>
