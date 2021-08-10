@@ -40,10 +40,11 @@
 			</div>
 
 			<div class="burger-hr">
-				<a class="lng-login burger__menu-link login green-link" href="{{ Route('login') }}"><i class="fas fa-sign-in-alt"></i>Вход</a>
-				<a class="lng-registr burger__menu-link register green-link" href="{{ Route('register') }}"><i class="fas fa-sign-in-alt"></i>Регистрация</a>
 				@auth
 				<a class="lng-registr burger__menu-link logout green-link" href="{{ Route('logout') }}"><i class="fas fa-sign-out-alt"></i>Выйти</a>
+				@else
+				<a class="lng-login burger__menu-link login green-link" href="{{ Route('login') }}"><i class="fas fa-sign-in-alt"></i>Вход</a>
+				<a class="lng-registr burger__menu-link register green-link" href="{{ Route('register') }}"><i class="fas fa-sign-in-alt"></i>Регистрация</a> 					
 				@endif
 			</div>
 
