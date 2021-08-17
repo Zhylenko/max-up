@@ -11,6 +11,8 @@
             <div class="container">
                 <form class="login__form form" id="login__form" action="{{ Route('login') }}" method="post" novalidate>
                     <div class="lng-reg-title form__title">Заполните данные для входа</div>
+
+                    @csrf
     
                     <div class="form-group">
                         <input type="mail" class="form-input _login _req" id="username_reg" name="email" required>

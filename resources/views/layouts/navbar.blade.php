@@ -7,36 +7,36 @@
 			@endif
 			<div class="burger-hr">
 				<a class="lng-home burger__menu-link" href="{{ Route('index') }}" target="_top"><i class="fas fa-home"></i>Главная</a>
-				<a class="lng-socail burger__menu-link" href="/socialnetworks" target="_top"><i class="fas fa-hashtag"></i>Социальные сети</a>
-				<a class="lng-rate burger__menu-link" href="/rating" target="_top"><i class="fas fa-hashtag"></i>Рейтинги и отзывы</a>
+				<a class="lng-socail burger__menu-link" href="{{ Route('socialnetworks') }}" target="_top"><i class="fas fa-hashtag"></i>Социальные сети</a>
+				<a class="lng-rate burger__menu-link" href="{{ Route('rating') }}" target="_top"><i class="fas fa-hashtag"></i>Рейтинги и отзывы</a>
 
 			</div>
 			<div class="burger-hr">
 				<a class="lng-buck burger__menu-link" href="{{ Route('cart') }}" target="_top"><i class="fas fa-shopping-cart"></i>Корзина</a>
-				<a class="lng-subsc burger__menu-link" href="/subscriptions" target="_top"><i class="fas fa-sync"></i>Подписки</a>
-				<a class="lng-history burger__menu-link" href="/history" target="_top"><i class="fas fa-history"></i>История заказов</a>
-				<a class="lng-balance burger__menu-link" href="/addfunds" target="_top"><i class="far fa-credit-card"></i>Пополнить баланс</a>
-				<a class="lng-promo burger__menu-link" href="/promocode" target="_top"><i class="fas fa-money-bill-wave"></i>Активировать промокод</a>
+				<a class="lng-subsc burger__menu-link" href="{{ Route('subscriptions') }}" target="_top"><i class="fas fa-sync"></i>Подписки</a>
+				<a class="lng-history burger__menu-link" href="{{ Route('history') }}" target="_top"><i class="fas fa-history"></i>История заказов</a>
+				<a class="lng-balance burger__menu-link" href="{{ Route('replenishment') }}" target="_top"><i class="far fa-credit-card"></i>Пополнить баланс</a>
+				<a class="lng-promo burger__menu-link" href="{{ Route('promocode') }}" target="_top"><i class="fas fa-money-bill-wave"></i>Активировать промокод</a>
 			</div>
 
 			<div class="burger-hr">
-				<a class="lng-partner burger__menu-link" target="_top" href="/partnership"><i class="fas fa-dollar-sign"></i>Партнерская программа</a>
-				<a class="lng-free burger__menu-link" target="_top" href="/getfree"><i class="fas fa-hand-holding-usd"></i>Бесплатное продвижение</a>
+				<a class="lng-partner burger__menu-link" target="_top" href="{{ Route('partnership') }}"><i class="fas fa-dollar-sign"></i>Партнерская программа</a>
+				<a class="lng-free burger__menu-link" target="_top" href="{{ Route('promotion') }}"><i class="fas fa-hand-holding-usd"></i>Бесплатное продвижение</a>
 			</div>
 
 			<div class="burger-hr">
-				<a class="lng-help burger__menu-link" target="_top" href="/support"><i class="fas fa-question"></i>Служба поддержки</a>
-				<a class="lng-info burger__menu-link" target="_top" href="/info"><i class="far fa-file-alt"></i>Информация</a>
-				<a class="lng-feedback burger__menu-link" target="_top" href="/reviews"><i class="far fa-comment-alt"></i>Отзывы</a>
+				<a class="lng-help burger__menu-link" target="_top" href="{{ Route('support') }}"><i class="fas fa-question"></i>Служба поддержки</a>
+				<a class="lng-info burger__menu-link" target="_top" href="{{ Route('information') }}"><i class="far fa-file-alt"></i>Информация</a>
+				<a class="lng-feedback burger__menu-link" target="_top" href="{{ Route('reviews') }}"><i class="far fa-comment-alt"></i>Отзывы</a>
 			</div>
 
 			<div class="burger-hr">
-				<a class="lng-instr burger__menu-link" target="_top" href="/tools"><i class="fas fa-wrench"></i>Инструменты</a>
+				<a class="lng-instr burger__menu-link" target="_top" href="{{ Route('tools') }}"><i class="fas fa-wrench"></i>Инструменты</a>
 			</div>
 
 			<div class="burger-hr">
-				<a class="burger__menu-link" target="_top" href="/api"><i class="fas fa-terminal"></i>Public API</a>
-				<a class="burger__menu-link" target="_top" href="/resell"><i class="fas fa-terminal"></i>Reseller API</a>
+				<a class="burger__menu-link" target="_top" href="{{ Route('api') }}"><i class="fas fa-terminal"></i>Public API</a>
+				<a class="burger__menu-link" target="_top" href="{{ Route('api.reseller') }}"><i class="fas fa-terminal"></i>Reseller API</a>
 			</div>
 
 			<div class="burger-hr">

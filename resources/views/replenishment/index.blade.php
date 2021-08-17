@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Корзина')
+@section('title', 'Пополнение баланса')
 @section('description', '')
 
 @section('styles')
@@ -10,60 +10,25 @@
         <div class="cart height-content">
             <div class="container">
 
-                <div class="cart__empty">
-
-                    <img class="cart__empty-img" src="{{ asset('img/empty-box.png') }}" alt="">
-                    <div class="cart__empty-text">Корзина пуста</div>
-
+                <div class="addfunds__top">
+                    <p class="addfunds__top-text">
+                        Пополняйте баланс и оплачивайте покупки в 1 клик
+                    </p>
                 </div>
 
                 <div class="cart__full">
 
-                    <div class="cart__full-top">
-                        <ul class="cart__list">
-
-                            <li class="cart__list-item">
-
-                                <div class="cart__list-img">
-                                    <img src="{{ asset('img/service/vk.svg') }}" alt="">
-                                </div>
-
-                                <div class="cart__list-group">
-
-                                    <div class="cart__list-top">
-                                        <div class="cart__list-top_name">vk</div>
-                                        <div class="cart__list-top_title">ВКонтакте друзья</div>
-                                        <button class="cart__list-top_btn">
-                                            <img src="{{ asset('img/trash.svg') }}" alt="">
-                                        </button>
-                                    </div>
-
-                                    <div class="cart__list-middle">
-                                        ссылка не указана
-                                    </div>
-
-                                    <div class="cart__list-bottom">
-                                        100 шт. x 0.24 грн. = 24 грн. (офферы, высокое качество)
-                                    </div>
-
-                                </div>
-
-                            </li>
-
-                        </ul>
-                    </div>
-
                     <div class="cart__full-bottom">
-                        <form class="cart__form" action="#" novalidate>
+                        <form class="cart__form" id="balance-form" action="#" novalidate>
 
                             <div class="cart__form-title">
-                                Оформление заказа
+                                Пополнение баланса
                             </div>
 
                             <div class="form-group">
-                                <input type="email" class="form-input" id="email-order" name="email-order" required>
-                                <label class="lng-password form-label" for="email-order">Почта для чека <span
-                                        class="password-span">(по желанию)</span></label>
+                                <input type="text" class="form-input _balance _req" id="balance" name="balance"
+                                    required>
+                                <label class="lng-password form-label" for="balance">Сумма</label>
                                 <div class="form-error">Необходимо заполнить пустое поле</div>
                             </div>
 
@@ -74,7 +39,7 @@
                                         <label class="cart__payment-label">
                                             <input class="cart__payment-checkbox" type="radio" value="1"
                                                 name="pay-checkbox" checked>
-                                            <img class="cart__payment-image" src="./img/payment/card_ym.svg" alt="">
+                                            <img class="cart__payment-image" src="{{ asset('img/payment/card_ym.svg') }}" alt="">
                                             <p class="cart__payment-subtitle">Банковская карта</p>
                                         </label>
                                     </li>
@@ -83,7 +48,7 @@
                                         <label class="cart__payment-label">
                                             <input class="cart__payment-checkbox" type="radio" value="2"
                                                 name="pay-checkbox">
-                                            <img class="cart__payment-image" src="./img/payment/card_up_ru.svg" alt="">
+                                            <img class="cart__payment-image" src="{{ asset('img/payment/card_up_ru.svg') }}" alt="">
                                             <p class="cart__payment-subtitle">Банковская карта</p>
                                         </label>
                                     </li>
@@ -92,7 +57,7 @@
                                         <label class="cart__payment-label">
                                             <input class="cart__payment-checkbox" type="radio" value="3"
                                                 name="pay-checkbox">
-                                            <img class="cart__payment-image" src="./img/payment/card_tf.svg" alt="">
+                                            <img class="cart__payment-image" src="{{ asset('img/payment/card_tf.svg') }}" alt="">
                                             <p class="cart__payment-subtitle">Банковская карта</p>
                                         </label>
                                     </li>
@@ -101,7 +66,7 @@
                                         <label class="cart__payment-label">
                                             <input class="cart__payment-checkbox" type="radio" value="4"
                                                 name="pay-checkbox">
-                                            <img class="cart__payment-image" src="./img/payment/qiwi.svg" alt="">
+                                            <img class="cart__payment-image" src="{{ asset('img/payment/qiwi.svg') }}" alt="">
                                             <p class="cart__payment-subtitle">QIWI Кошелек</p>
                                         </label>
                                     </li>
@@ -110,7 +75,7 @@
                                         <label class="cart__payment-label">
                                             <input class="cart__payment-checkbox" type="radio" value="5"
                                                 name="pay-checkbox">
-                                            <img class="cart__payment-image" src="./img/payment/ym.svg" alt="">
+                                            <img class="cart__payment-image" src="{{ asset('img/payment/ym.svg') }}" alt="">
                                             <p class="cart__payment-subtitle">ЮMoneyк</p>
                                         </label>
                                     </li>
@@ -119,7 +84,7 @@
                                         <label class="cart__payment-label">
                                             <input class="cart__payment-checkbox" type="radio" value="6"
                                                 name="pay-checkbox">
-                                            <img class="cart__payment-image" src="./img/payment/webmoney.svg" alt="">
+                                            <img class="cart__payment-image" src="{{ asset('img/payment/webmoney.svg') }}" alt="">
                                             <p class="cart__payment-subtitle">WebMoney</p>
                                         </label>
                                     </li>
@@ -128,7 +93,7 @@
                                         <label class="cart__payment-label">
                                             <input class="cart__payment-checkbox" type="radio" value="7"
                                                 name="pay-checkbox">
-                                            <img class="cart__payment-image" src="./img/payment/bitcoin.svg" alt="">
+                                            <img class="cart__payment-image" src="{{ asset('img/payment/bitcoin.svg') }}" alt="">
                                             <p class="cart__payment-subtitle">Криптовалюта</p>
                                         </label>
                                     </li>
@@ -137,7 +102,7 @@
                                         <label class="cart__payment-label">
                                             <input class="cart__payment-checkbox" type="radio" value="8"
                                                 name="pay-checkbox">
-                                            <img class="cart__payment-image" src="./img/payment/mobile.svg" alt="">
+                                            <img class="cart__payment-image" src="{{ asset('img/payment/mobile.svg') }}" alt="">
                                             <p class="cart__payment-subtitle">Баланс телефона</p>
                                         </label>
                                     </li>
@@ -146,7 +111,7 @@
                                         <label class="cart__payment-label">
                                             <input class="cart__payment-checkbox" type="radio" value="9"
                                                 name="pay-checkbox">
-                                            <img class="cart__payment-image" src="./img/payment/cash.svg" alt="">
+                                            <img class="cart__payment-image" src="{{ asset('img/payment/cash.svg') }}" alt="">
                                             <p class="cart__payment-subtitle">Наличные</p>
                                         </label>
                                     </li>
@@ -164,26 +129,25 @@
                                             class="lng-rules form-terms_rules"
                                             href="{{ Route('terms') }}">правила
                                             сервиса</a></span>
-                                    <div class="form-error">Необходимо заполнить пустое поле</div>
+                                    <div class="form-error"></div>
                                 </label>
 
                             </div>
 
                             <div class="cart__form-total">
-                                сумма
+                                баланс
                                 <span class="cart-total-price">
                                     0
                                 </span>
                                 грн.
                             </div>
 
-                            <button class="form-btn" id="submit_total-order" type="submit" value="reset">Оформить заказ</button>
+                            <button class="form-btn" id="submit_total-order" name="buttonName" value="Submit">Пополнить
+                                баланс</button>
 
                         </form>
                     </div>
-
                 </div>
-
             </div>
         </div>
 @endsection

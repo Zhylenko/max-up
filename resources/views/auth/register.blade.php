@@ -13,6 +13,8 @@
                 <form class="reg-form form" action="{{ Route('register') }}" method="post" id="reg_form" novalidate>
     
                     <div class="lng-reg-title form__title">Заполните данные для входа</div>
+
+                    @csrf
                     
                     <div class="form-group">
                         <input type="text" class="form-input _login _req" id="username_reg" name="name" required>

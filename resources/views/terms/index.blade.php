@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Max Up')
+@section('title', 'Условия')
 @section('description', '')
 
 @section('styles')
